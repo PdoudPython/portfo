@@ -1,5 +1,6 @@
-from flask import Flask, render_template, url_for, request, redirect
+from flask import Flask, render_template, url_for, request, redirect, jsonify
 import csv
+import checkpass
 
 app = Flask(__name__)
 
@@ -38,4 +39,18 @@ def submit_form():
             return 'did not save to database'
     else:
         return "Something went wrong, try again!"
+
+
+@app.route('/check_password', methods=['POST'])
+def check_password():
+    if request.method == 'POST':
+        password = request.form['password']
+        count = checkpass.pwned_api_check(password)
+        if count:
+            result = f"{password} was found {count} times... you should probably change the password..."
+        else:
+            result = f"{password} was not found! Looks like it's a good password!"
+        return jsonify({'result': result})
+    return "Something went wrong, try again!"
+
     

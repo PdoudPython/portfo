@@ -24,7 +24,7 @@
 <div id="site-border-right"></div>
 <div id="site-border-top"></div>
 <div id="site-border-bottom"></div>
- <!-- Add your content of header -->
+<!-- Add your content of header -->
 <header>
   <nav class="navbar  navbar-fixed-top navbar-default">
     <div class="container">
@@ -44,72 +44,86 @@
         </ul>
 
 
+          <ul class="nav navbar-nav navbar-right navbar-small visible-md visible-lg">
+            <li><a href="./index.html" title="" class="active">001</a></li>
+            <li><a href="./index.html" title="">002</a></li>
+            <li><a href="./index.html" title="">003</a></li>
+            <li><a href="./index.html" title="">004</a></li>
+            <li><a href="./index.html" title="">005</a></li>
+            <li><a href="./index.html" title="">006</a></li>
+          </ul>
+
+
       </div> 
     </div>
   </nav>
 </header>
-
 <div class="section-container">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="section-container-spacer text-center">
-            <h1 class="h2">01 : Is My Password Compromised?</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <img src="/static/assets/images/work001-01.jpg" class="img-responsive" alt="">
+        <div class="card-container">
+          <div class="text-center">
+            <h1 class="h2">001 : Password Checker</h1>
           </div>
-          
-          <div class="row">
-            <div class="col-md-12 col-md-offset-1">
-               <form action="submit_form" method="POST" class="reveal-content">
-                  <div class="row">
-                    <div class="col-md-7">
-                      <div class="form-group">
-                        <input name="email" type="email" class="form-control" id="email" placeholder="What password would you like to check (do not input your actual password)?">
-                                            </div>
-                      <button type="submit" class="btn btn-default btn-lg">Search</button>
-                    </div>           
-                    <div class="col-md-12 col-md-offset-1 address-container">
-                      <ul class="list-unstyled">
-                        <li>
-                          <span class="fa-icon">
-                            <i class="fa fa-phone" aria-hidden="true"></i>
-                          </span>
-                          (xxx)-xxx-9817
-                        </li>
-                        <li>
-                          <span class="fa-icon">
-                            <i class="fa fa-at" aria-hidden="true"></i>
-                          </span>
-                          pdoudpython@gmail.com
-                        </li>
-                        <li>
-                          <span class="fa-icon">
-                            <i class="fa fa fa-map-marker" aria-hidden="true"></i>
-                          </span>
-                          123 Ocean Springs Ave
-                        </li>
-                      </ul>
-                      <h3>Follow me on social networks</h3>
-                      <a href="http://www.facebook.com/philip.doud" title="" class="fa-icon">
-                        <i class="fa fa-facebook"></i>
-                      </a>
-                      <a href="http://www.twitter.com" title="" class="fa-icon">
-                        <i class="fa fa-twitter"></i>
-                      </a>
-                      <a href="https://www.linkedin.com/in/philip-doud-31955b144/" title="" class="fa-icon">
-                        <i class="fa fa-linkedin"></i>
-                      </a>
-
-                    </div>
+          <p><center>This program references the "am i pwned?" api to determine whether or not a given input has been implemented in a list of data breaches</center></p>
+          <p><center>Run through Flask and using SHA-1 hashing and k-anonymity, the program will reference a database of over 600,000,000 confirmed compromised passwords, and will determine whether or not a password was included in the data breach and, if so, how many times it was compromised.</center></p>
                   </div>
-                </form>
+                  <div class="row">
+                    <div class="col-md-10 col-md-offset-3">
+                       <form action="/check_password" method="POST" class="reveal-content">
+                          <div class="row">
+                            <div class="col-md-7">
+                              <div class="form-group">
+                                <input name="password" type="password" class="form-control" id="password" placeholder="Check if a password has been implemented.">
+                                                    </div>
+                              <button type="submit" class="btn btn-default btn-lg">Search</button>
+                              <p> </p>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-12 col-md-offset-0 address-container">
+                                <ul class="list-unstyled">
+                                  <li>
+                                    <p> </p>
+                                    <span class="fa-icon">
+                                      <i class="fa fa-phone" aria-hidden="true"></i>
+                                    </span>
+                                    (xxx)-xxx-9817
+                                    <span class="fa-icon">
+                                      <i class="fa fa-at" aria-hidden="true"></i>
+                                    </span>
+                                    pdoudpython@gmail.com
+                                    <span class="fa-icon">
+                                      <i class="fa fa fa-map-marker" aria-hidden="true"></i>
+                                    </span>
+                                    123 Ocean Springs Ave
+                                  </li>
+                                  <li>
+                                  </li>
+                                </ul>
+                                <h3>Follow me on social networks</h3>
+                                <a href="http://www.facebook.com/philip.doud" title="" class="fa-icon">
+                                  <i class="fa fa-facebook"></i>
+                                </a>
+                                <a href="http://www.twitter.com" title="" class="fa-icon">
+                                  <i class="fa fa-twitter"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/philip-doud-31955b144/" title="" class="fa-icon">
+                                  <i class="fa fa-linkedin"></i>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                    </div>
+        
+                  </div>
+                 
+               </div>
+              </div>
             </div>
-
           </div>
-         
-       </div>
-      </div>
-    </div>
-  </div>
 
 
 <footer class="footer-container text-center">
@@ -141,6 +155,6 @@
   ga('send', 'pageview');
 </script>
 
---> <script type="text/javascript" src="./static/main.70a66962.js"></script></body>
+--> <script type="text/javascript" src="/static/main.70a66962.js"></script></body>
 
 </html>
